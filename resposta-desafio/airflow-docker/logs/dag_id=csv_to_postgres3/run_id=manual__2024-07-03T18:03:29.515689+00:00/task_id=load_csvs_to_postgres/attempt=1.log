@@ -1,0 +1,80 @@
+[2024-07-03T18:03:31.371+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-03T18:03:31.385+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_to_postgres3.load_csvs_to_postgres manual__2024-07-03T18:03:29.515689+00:00 [queued]>
+[2024-07-03T18:03:31.390+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_to_postgres3.load_csvs_to_postgres manual__2024-07-03T18:03:29.515689+00:00 [queued]>
+[2024-07-03T18:03:31.391+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-07-03T18:03:31.408+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_csvs_to_postgres> on 2024-07-03 18:03:29.515689+00:00
+[2024-07-03T18:03:31.418+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=149) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-03T18:03:31.421+0000] {standard_task_runner.py:63} INFO - Started process 151 to run task
+[2024-07-03T18:03:31.422+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'csv_to_postgres3', 'load_csvs_to_postgres', 'manual__2024-07-03T18:03:29.515689+00:00', '--job-id', '73', '--raw', '--subdir', 'DAGS_FOLDER/csv_to_postgres3.py', '--cfg-path', '/tmp/tmpyn5a63ss']
+[2024-07-03T18:03:31.427+0000] {standard_task_runner.py:91} INFO - Job 73: Subtask load_csvs_to_postgres
+[2024-07-03T18:03:31.502+0000] {task_command.py:426} INFO - Running <TaskInstance: csv_to_postgres3.load_csvs_to_postgres manual__2024-07-03T18:03:29.515689+00:00 [running]> on host 9dffc1d7579f
+[2024-07-03T18:03:31.698+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_to_postgres3' AIRFLOW_CTX_TASK_ID='load_csvs_to_postgres' AIRFLOW_CTX_EXECUTION_DATE='2024-07-03T18:03:29.515689+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-03T18:03:29.515689+00:00'
+[2024-07-03T18:03:31.700+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-03T18:03:31.735+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:31.745+0000] {sql.py:487} INFO - Running statement: TRUNCATE TABLE employee_territories, parameters: None
+[2024-07-03T18:03:31.771+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:31.808+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:31.824+0000] {sql.py:487} INFO - Running statement: TRUNCATE TABLE orders, parameters: None
+[2024-07-03T18:03:31.873+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:31.918+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:31.934+0000] {sql.py:487} INFO - Running statement: TRUNCATE TABLE order_details, parameters: None
+[2024-07-03T18:03:31.966+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.011+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.029+0000] {sql.py:487} INFO - Running statement: TRUNCATE TABLE customers, parameters: None
+[2024-07-03T18:03:32.063+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.095+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.110+0000] {sql.py:487} INFO - Running statement: TRUNCATE TABLE products, parameters: None
+[2024-07-03T18:03:32.134+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.169+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.184+0000] {sql.py:487} INFO - Running statement: TRUNCATE TABLE shippers, parameters: None
+[2024-07-03T18:03:32.209+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.239+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.253+0000] {sql.py:487} INFO - Running statement: TRUNCATE TABLE suppliers, parameters: None
+[2024-07-03T18:03:32.285+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.329+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.347+0000] {sql.py:487} INFO - Running statement: TRUNCATE TABLE territories, parameters: None
+[2024-07-03T18:03:32.380+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.416+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.432+0000] {sql.py:487} INFO - Running statement: TRUNCATE TABLE us_states, parameters: None
+[2024-07-03T18:03:32.460+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.496+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.512+0000] {sql.py:487} INFO - Running statement: TRUNCATE TABLE categories, parameters: None
+[2024-07-03T18:03:32.540+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.569+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.582+0000] {sql.py:487} INFO - Running statement: TRUNCATE TABLE region, parameters: None
+[2024-07-03T18:03:32.611+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.642+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.658+0000] {sql.py:487} INFO - Running statement: TRUNCATE TABLE employees, parameters: None
+[2024-07-03T18:03:32.687+0000] {base.py:84} INFO - Using connection ID 'postgres_destino' for task execution.
+[2024-07-03T18:03:32.705+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-03T18:03:32.706+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/csv_to_postgres3.py", line 50, in load_csvs_to_postgres
+    cursor.copy_expert(f"COPY {table_name} FROM STDIN WITH CSV", csv_buffer)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type smallint: "2.0"
+CONTEXT:  COPY employees, line 1, column reports_to: "2.0"
+
+[2024-07-03T18:03:32.721+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=csv_to_postgres3, task_id=load_csvs_to_postgres, run_id=manual__2024-07-03T18:03:29.515689+00:00, execution_date=20240703T180329, start_date=20240703T180331, end_date=20240703T180332
+[2024-07-03T18:03:32.747+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 73 for task load_csvs_to_postgres (invalid input syntax for type smallint: "2.0"
+CONTEXT:  COPY employees, line 1, column reports_to: "2.0"
+; 151)
+[2024-07-03T18:03:32.793+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-07-03T18:03:32.826+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T18:03:32.831+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

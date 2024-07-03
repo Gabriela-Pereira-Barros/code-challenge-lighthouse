@@ -1,0 +1,7 @@
+Comandos
+
+# Criar pasta airflow-docker
+
+# Criar arquivo docker-compose.yaml
+# Copiar configuração da documentação oficial
+# https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html

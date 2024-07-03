@@ -1,0 +1,40 @@
+[2024-07-03T19:30:51.426+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-03T19:30:51.439+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_to_postgres.load_csvs_to_postgres manual__2024-07-03T19:30:49.296079+00:00 [queued]>
+[2024-07-03T19:30:51.445+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_to_postgres.load_csvs_to_postgres manual__2024-07-03T19:30:49.296079+00:00 [queued]>
+[2024-07-03T19:30:51.445+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-07-03T19:30:51.456+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_csvs_to_postgres> on 2024-07-03 19:30:49.296079+00:00
+[2024-07-03T19:30:51.461+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=946) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-03T19:30:51.462+0000] {standard_task_runner.py:63} INFO - Started process 948 to run task
+[2024-07-03T19:30:51.465+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'csv_to_postgres', 'load_csvs_to_postgres', 'manual__2024-07-03T19:30:49.296079+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/csv_to_postgres.py', '--cfg-path', '/tmp/tmpiydatep7']
+[2024-07-03T19:30:51.469+0000] {standard_task_runner.py:91} INFO - Job 84: Subtask load_csvs_to_postgres
+[2024-07-03T19:30:51.522+0000] {task_command.py:426} INFO - Running <TaskInstance: csv_to_postgres.load_csvs_to_postgres manual__2024-07-03T19:30:49.296079+00:00 [running]> on host 9dffc1d7579f
+[2024-07-03T19:30:51.685+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_to_postgres' AIRFLOW_CTX_TASK_ID='load_csvs_to_postgres' AIRFLOW_CTX_EXECUTION_DATE='2024-07-03T19:30:49.296079+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-03T19:30:49.296079+00:00'
+[2024-07-03T19:30:51.687+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-03T19:30:51.721+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-03T19:30:51.737+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/csv_to_postgres.py", line 37, in load_csvs_to_postgres
+    raise AirflowException("Arquivos para o dia atual não encontrados, verificar logs de execução Airflow no Meltano.")
+airflow.exceptions.AirflowException: Arquivos para o dia atual não encontrados, verificar logs de execução Airflow no Meltano.
+[2024-07-03T19:30:51.749+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=csv_to_postgres, task_id=load_csvs_to_postgres, run_id=manual__2024-07-03T19:30:49.296079+00:00, execution_date=20240703T193049, start_date=20240703T193051, end_date=20240703T193051
+[2024-07-03T19:30:51.785+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 84 for task load_csvs_to_postgres (Arquivos para o dia atual não encontrados, verificar logs de execução Airflow no Meltano.; 948)
+[2024-07-03T19:30:51.809+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-07-03T19:30:51.845+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T19:30:51.850+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
