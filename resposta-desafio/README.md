@@ -47,7 +47,7 @@ docker-compose up
 ## Detalhamento técnico
 
 ### Escolha das ferramentas
-Para construir o pipeline escolhi o Meltano devido minha afinidade com Python. Para utilização do Airflow, devido ao conflito de depências, preferi executá-lo através do docker-compose. E para o Postgresql, também o executei com o docker devido ao benefício de isolar os bancos de dados fonte e destino e da praticidade em destruir e subir os containers.
+Para construir o pipeline escolhi o Meltano devido minha afinidade com Python. Para utilização do Airflow, devido ao conflito de depências, preferi executá-lo através do docker-compose. Para o Postgresql, também o executei com o docker devido ao benefício de isolar os bancos de dados fonte e destino e da praticidade em destruir e subir os containers. Para armazenamento no sistema local, escolhi o tipo de arquivo .csv devido sua manipulação ser mais fácil para inserir os dados no banco de dados posteriormente.
 
 ### Fontes de dados
 O arquivo .csv foi baixado do repositório e consumido através da própria pasta de Dowloads. Já para a fonte PostgreSQL foi baixado o arquivo northwind.sql e utilizado para criar o banco de dados fonte com o docker através do comando:
@@ -58,10 +58,41 @@ docker run --name fonte -e POSTGRES_DB=dbfonte -e POSTGRES_USER=gpb -e POSTGRES_
 Obs.: devido a um erro que estava ocorrendo no meltano foi necessário alterar o arquivo northwind.sql mudando do tipo de dado _real_ para o tipo _character varying(5)_.
 
 ### Banco de dados de destino
+Para o banco de dados de destino foi criado o arquivo destino.sql e executado o seguinte comando:
 ```bash
-
+docker run --name destino -e POSTGRES_DB=dbdestino -e POSTGRES_USER=gpb -e POSTGRES_PASSWORD=5588 -d -p 5588:5432 -v "$(pwd)"/destino.sql:/docker-entrypoint-initdb.d/destino.sql postgres
 ```
-
-
 ### Estrutura do pipeline
-Como um dos requisitos do desafio é ter uma separação nos caminhos dos arquivos que serão criados para cada fonte, foram criados dois projetos Meltano, a fim de direcionar o target-postgres para caminhos de pastas diferentes.
+Como um dos requisitos do desafio é ter uma separação nos caminhos dos arquivos que serão criados para cada fonte, foram criados dois projetos Meltano, a fim de direcionar o target-postgres para caminhos de pastas diferentes. Assim o pipeline ficou estruturado da seguinte maneira:
+
+Apesar das dags estarem em seções diferentes do Airflow, a dag que corresponde ao Step 2, só poderá ser executada com sucesso caso o Step 1 seja executado, pois depende dos arquivos gerados por ele. Uma mensagem de aviso foi adionada ao arquivo csv_to_postgres para auxiliar na identificação desta situação no log de erro.
+
+### Agendamento
+Para as três dags do pipeline foi utilizado _schedule_interval_ como _"* * * * 1-5"_ que determinada que elas serão executadas diariamente de segunda a sexta, sendo que essa configuração pode ser alterada de acordo com as regras de negócio do cliente.
+
+### Resultado 
+Para obeter o resultado executei a seguinte query no banco de dados de destino:
+```sql
+SELECT
+    o.order_id,
+    customer_id,
+    employee_id,
+    order_date,
+    required_date,
+    shipped_date,
+    ship_via,
+    freight,
+    ship_name,
+    ship_address,
+    ship_city,
+    ship_region,
+    ship_postal_code,
+    ship_country,
+    product_id,
+    unit_price,
+    quantity,
+    discount
+FROM public.orders AS o
+JOIN public.order_details AS od ON o.order_id = od.order_id
+```
+O arquivo resultado.csv traz os dados obtidos com essa query.
