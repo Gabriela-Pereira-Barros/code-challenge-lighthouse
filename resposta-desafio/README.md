@@ -37,7 +37,7 @@ docker-compose up
 ```
 - Acessar o Airflow em: http://localhost:8080
 - Verificar a execução da dag csv_to_postgres, conferindo nos logs caso a execução falhe.
-- Caso seja desejado executar o step 2 para uma data anterior a data atual, criar no airflow em Admin > Variables a variável _execution_date_ com a data desejada no formato _YYYY-MM-DD_.
+- Caso seja desejado executar o step 2 para uma data anterior a data atual, criar no Airflow em Admin > Variables a variável _execution_date_ com a data desejada no formato _YYYY-MM-DD_.
 
 ### Pré-requisitos para execução do pipeline:
 - Ter instalado docker e meltano.
@@ -62,8 +62,12 @@ Para o banco de dados de destino foi criado o arquivo destino.sql e executado o 
 ```bash
 docker run --name destino -e POSTGRES_DB=dbdestino -e POSTGRES_USER=gpb -e POSTGRES_PASSWORD=5588 -d -p 5588:5432 -v "$(pwd)"/destino.sql:/docker-entrypoint-initdb.d/destino.sql postgres
 ```
+Como o Airflow está sendo executado em um container e o banco de dados em outro, para realizar a conexão foi estabelecido o _postgres_conn_id='postgres_destino'_ no arquivo da dag csv_to_postgres.py. Para tal é necessário configurar no Airflow uma conexão com postgres_destino como Connection Id. Sua única particularidade é que o host deve ser o endereço IP da máquina que hospeda os containers (localhost não funciona, pois iria redirecionar para o localhost do container que hospeda o Airflow).
+
 ### Estrutura do pipeline
 Como um dos requisitos do desafio é ter uma separação nos caminhos dos arquivos que serão criados para cada fonte, foram criados dois projetos Meltano, a fim de direcionar o target-postgres para caminhos de pastas diferentes. Assim o pipeline ficou estruturado da seguinte maneira:
+
+![estrutura_pipeline](https://github.com/Gabriela-Pereira-Barros/code-challenge-lighthouse/assets/161372019/15476957-b11b-4019-80ae-aa17b1e0a198)
 
 Apesar das dags estarem em seções diferentes do Airflow, a dag que corresponde ao Step 2, só poderá ser executada com sucesso caso o Step 1 seja executado, pois depende dos arquivos gerados por ele. Uma mensagem de aviso foi adionada ao arquivo csv_to_postgres para auxiliar na identificação desta situação no log de erro.
 
