@@ -1,0 +1,738 @@
+2024-07-03 17:11:11,915 INFO - Task context logging is enabled
+2024-07-03 17:11:11,915 INFO - Loaded executor: SequentialExecutor
+2024-07-03 17:11:11,934 INFO - Starting the scheduler
+2024-07-03 17:11:11,934 INFO - Processing each file at most -1 times
+2024-07-03 17:11:11,938 INFO - Launched DagFileProcessorManager with pid: 181459
+2024-07-03 17:11:11,939 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-03 17:11:11,941 INFO - Configured default timezone UTC
+2024-07-03 17:11:12,257 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:11:00+00:00, run_after=2024-07-03 20:12:00+00:00
+2024-07-03 17:11:12,384 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:10:00+00:00 [scheduled]>
+2024-07-03 17:11:12,385 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:11:12,385 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:10:00+00:00 [scheduled]>
+2024-07-03 17:11:12,386 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:11:12,386 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:10:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:11:12,386 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:10:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:11:12,389 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:10:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:11:17,012 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:10:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:11:17,019 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:10:00+00:00, map_index=-1, run_start_date=2024-07-03 20:11:13.130808+00:00, run_end_date=2024-07-03 20:11:16.722796+00:00, run_duration=3.591988, state=success, executor_state=success, try_number=1, max_tries=0, job_id=2, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:11:12.385317+00:00, queued_by_job_id=1, pid=181467
+2024-07-03 17:11:18,861 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:10:00+00:00: scheduled__2024-07-03T20:10:00+00:00, state:running, queued_at: 2024-07-03 20:11:12.240738+00:00. externally triggered: False> successful
+2024-07-03 17:11:18,861 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:10:00+00:00, run_id=scheduled__2024-07-03T20:10:00+00:00, run_start_date=2024-07-03 20:11:12.281683+00:00, run_end_date=2024-07-03 20:11:18.861811+00:00, run_duration=6.580128, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:10:00+00:00, data_interval_end=2024-07-03 20:11:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:11:18,864 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:11:00+00:00, run_after=2024-07-03 20:12:00+00:00
+2024-07-03 17:12:01,807 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:12:00+00:00, run_after=2024-07-03 20:13:00+00:00
+2024-07-03 17:12:01,844 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:11:00+00:00 [scheduled]>
+2024-07-03 17:12:01,845 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:12:01,845 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:11:00+00:00 [scheduled]>
+2024-07-03 17:12:01,847 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:12:01,847 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:11:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:12:01,847 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:11:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:12:01,851 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:11:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:12:06,091 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:11:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:12:06,095 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:11:00+00:00, map_index=-1, run_start_date=2024-07-03 20:12:02.603751+00:00, run_end_date=2024-07-03 20:12:05.812231+00:00, run_duration=3.20848, state=success, executor_state=success, try_number=1, max_tries=0, job_id=3, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:12:01.846028+00:00, queued_by_job_id=1, pid=181762
+2024-07-03 17:12:06,132 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:11:00+00:00: scheduled__2024-07-03T20:11:00+00:00, state:running, queued_at: 2024-07-03 20:12:01.803040+00:00. externally triggered: False> successful
+2024-07-03 17:12:06,132 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:11:00+00:00, run_id=scheduled__2024-07-03T20:11:00+00:00, run_start_date=2024-07-03 20:12:01.819582+00:00, run_end_date=2024-07-03 20:12:06.132600+00:00, run_duration=4.313018, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:11:00+00:00, data_interval_end=2024-07-03 20:12:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:12:06,136 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:12:00+00:00, run_after=2024-07-03 20:13:00+00:00
+2024-07-03 17:13:02,672 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:13:00+00:00, run_after=2024-07-03 20:14:00+00:00
+2024-07-03 17:13:02,712 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:12:00+00:00 [scheduled]>
+2024-07-03 17:13:02,712 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:13:02,712 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:12:00+00:00 [scheduled]>
+2024-07-03 17:13:02,713 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:13:02,714 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:12:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:13:02,714 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:12:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:13:02,718 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:12:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:13:06,824 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:12:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:13:06,827 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:12:00+00:00, map_index=-1, run_start_date=2024-07-03 20:13:03.413063+00:00, run_end_date=2024-07-03 20:13:06.595174+00:00, run_duration=3.182111, state=success, executor_state=success, try_number=1, max_tries=0, job_id=4, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:13:02.713102+00:00, queued_by_job_id=1, pid=182097
+2024-07-03 17:13:06,869 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:12:00+00:00: scheduled__2024-07-03T20:12:00+00:00, state:running, queued_at: 2024-07-03 20:13:02.666946+00:00. externally triggered: False> successful
+2024-07-03 17:13:06,870 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:12:00+00:00, run_id=scheduled__2024-07-03T20:12:00+00:00, run_start_date=2024-07-03 20:13:02.687555+00:00, run_end_date=2024-07-03 20:13:06.870161+00:00, run_duration=4.182606, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:12:00+00:00, data_interval_end=2024-07-03 20:13:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:13:06,874 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:13:00+00:00, run_after=2024-07-03 20:14:00+00:00
+2024-07-03 17:14:01,484 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:14:00+00:00, run_after=2024-07-03 20:15:00+00:00
+2024-07-03 17:14:01,547 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:13:00+00:00 [scheduled]>
+2024-07-03 17:14:01,548 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:14:01,548 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:13:00+00:00 [scheduled]>
+2024-07-03 17:14:01,551 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:14:01,552 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:13:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:14:01,553 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:13:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:14:01,558 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:13:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:14:05,620 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:13:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:14:05,624 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:13:00+00:00, map_index=-1, run_start_date=2024-07-03 20:14:02.300818+00:00, run_end_date=2024-07-03 20:14:05.394620+00:00, run_duration=3.093802, state=success, executor_state=success, try_number=1, max_tries=0, job_id=5, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:14:01.549843+00:00, queued_by_job_id=1, pid=182490
+2024-07-03 17:14:07,365 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:13:00+00:00: scheduled__2024-07-03T20:13:00+00:00, state:running, queued_at: 2024-07-03 20:14:01.474993+00:00. externally triggered: False> successful
+2024-07-03 17:14:07,366 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:13:00+00:00, run_id=scheduled__2024-07-03T20:13:00+00:00, run_start_date=2024-07-03 20:14:01.502810+00:00, run_end_date=2024-07-03 20:14:07.366105+00:00, run_duration=5.863295, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:13:00+00:00, data_interval_end=2024-07-03 20:14:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:14:07,368 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:14:00+00:00, run_after=2024-07-03 20:15:00+00:00
+2024-07-03 17:15:01,316 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:15:00+00:00, run_after=2024-07-03 20:16:00+00:00
+2024-07-03 17:15:01,359 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:14:00+00:00 [scheduled]>
+2024-07-03 17:15:01,360 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:15:01,360 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:14:00+00:00 [scheduled]>
+2024-07-03 17:15:01,362 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:15:01,362 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:14:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:15:01,363 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:14:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:15:01,367 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:14:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:15:05,431 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:14:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:15:05,437 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:14:00+00:00, map_index=-1, run_start_date=2024-07-03 20:15:02.076449+00:00, run_end_date=2024-07-03 20:15:05.185078+00:00, run_duration=3.108629, state=success, executor_state=success, try_number=1, max_tries=0, job_id=6, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:15:01.361083+00:00, queued_by_job_id=1, pid=182954
+2024-07-03 17:15:05,476 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:14:00+00:00: scheduled__2024-07-03T20:14:00+00:00, state:running, queued_at: 2024-07-03 20:15:01.311194+00:00. externally triggered: False> successful
+2024-07-03 17:15:05,476 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:14:00+00:00, run_id=scheduled__2024-07-03T20:14:00+00:00, run_start_date=2024-07-03 20:15:01.330987+00:00, run_end_date=2024-07-03 20:15:05.476506+00:00, run_duration=4.145519, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:14:00+00:00, data_interval_end=2024-07-03 20:15:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:15:05,481 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:15:00+00:00, run_after=2024-07-03 20:16:00+00:00
+2024-07-03 17:16:01,500 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:16:00+00:00, run_after=2024-07-03 20:17:00+00:00
+2024-07-03 17:16:01,522 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:15:00+00:00 [scheduled]>
+2024-07-03 17:16:01,522 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:16:01,522 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:15:00+00:00 [scheduled]>
+2024-07-03 17:16:01,523 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:16:01,523 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:15:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:16:01,524 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:15:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:16:01,527 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:15:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:16:05,302 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:15:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:16:05,306 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:15:00+00:00, map_index=-1, run_start_date=2024-07-03 20:16:02.257879+00:00, run_end_date=2024-07-03 20:16:05.068192+00:00, run_duration=2.810313, state=success, executor_state=success, try_number=1, max_tries=0, job_id=7, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:16:01.523092+00:00, queued_by_job_id=1, pid=183360
+2024-07-03 17:16:05,337 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:15:00+00:00: scheduled__2024-07-03T20:15:00+00:00, state:running, queued_at: 2024-07-03 20:16:01.498257+00:00. externally triggered: False> successful
+2024-07-03 17:16:05,337 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:15:00+00:00, run_id=scheduled__2024-07-03T20:15:00+00:00, run_start_date=2024-07-03 20:16:01.507746+00:00, run_end_date=2024-07-03 20:16:05.337631+00:00, run_duration=3.829885, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:15:00+00:00, data_interval_end=2024-07-03 20:16:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:16:05,339 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:16:00+00:00, run_after=2024-07-03 20:17:00+00:00
+2024-07-03 17:16:11,991 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-03 17:17:01,133 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:17:00+00:00, run_after=2024-07-03 20:18:00+00:00
+2024-07-03 17:17:01,160 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:16:00+00:00 [scheduled]>
+2024-07-03 17:17:01,160 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:17:01,160 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:16:00+00:00 [scheduled]>
+2024-07-03 17:17:01,161 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:17:01,162 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:16:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:17:01,162 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:16:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:17:01,165 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:16:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:17:05,251 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:16:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:17:05,255 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:16:00+00:00, map_index=-1, run_start_date=2024-07-03 20:17:01.841556+00:00, run_end_date=2024-07-03 20:17:05.000429+00:00, run_duration=3.158873, state=success, executor_state=success, try_number=1, max_tries=0, job_id=8, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:17:01.161000+00:00, queued_by_job_id=1, pid=183700
+2024-07-03 17:17:05,302 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:16:00+00:00: scheduled__2024-07-03T20:16:00+00:00, state:running, queued_at: 2024-07-03 20:17:01.129476+00:00. externally triggered: False> successful
+2024-07-03 17:17:05,302 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:16:00+00:00, run_id=scheduled__2024-07-03T20:16:00+00:00, run_start_date=2024-07-03 20:17:01.141627+00:00, run_end_date=2024-07-03 20:17:05.302444+00:00, run_duration=4.160817, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:16:00+00:00, data_interval_end=2024-07-03 20:17:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:17:05,306 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:17:00+00:00, run_after=2024-07-03 20:18:00+00:00
+2024-07-03 17:18:01,114 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:18:00+00:00, run_after=2024-07-03 20:19:00+00:00
+2024-07-03 17:18:01,151 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:17:00+00:00 [scheduled]>
+2024-07-03 17:18:01,151 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:18:01,151 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:17:00+00:00 [scheduled]>
+2024-07-03 17:18:01,152 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:18:01,153 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:17:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:18:01,153 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:17:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:18:01,156 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:17:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:18:05,044 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:17:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:18:05,050 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:17:00+00:00, map_index=-1, run_start_date=2024-07-03 20:18:01.842778+00:00, run_end_date=2024-07-03 20:18:04.783265+00:00, run_duration=2.940487, state=success, executor_state=success, try_number=1, max_tries=0, job_id=9, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:18:01.152132+00:00, queued_by_job_id=1, pid=184037
+2024-07-03 17:18:05,085 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:17:00+00:00: scheduled__2024-07-03T20:17:00+00:00, state:running, queued_at: 2024-07-03 20:18:01.109170+00:00. externally triggered: False> successful
+2024-07-03 17:18:05,086 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:17:00+00:00, run_id=scheduled__2024-07-03T20:17:00+00:00, run_start_date=2024-07-03 20:18:01.127429+00:00, run_end_date=2024-07-03 20:18:05.086275+00:00, run_duration=3.958846, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:17:00+00:00, data_interval_end=2024-07-03 20:18:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:18:05,090 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:18:00+00:00, run_after=2024-07-03 20:19:00+00:00
+2024-07-03 17:19:01,791 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:19:00+00:00, run_after=2024-07-03 20:20:00+00:00
+2024-07-03 17:19:01,828 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:18:00+00:00 [scheduled]>
+2024-07-03 17:19:01,828 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:19:01,828 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:18:00+00:00 [scheduled]>
+2024-07-03 17:19:01,829 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:19:01,830 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:18:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:19:01,830 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:18:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:19:01,834 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:18:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:19:05,838 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:18:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:19:05,841 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:18:00+00:00, map_index=-1, run_start_date=2024-07-03 20:19:02.522773+00:00, run_end_date=2024-07-03 20:19:05.611851+00:00, run_duration=3.089078, state=success, executor_state=success, try_number=1, max_tries=0, job_id=10, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:19:01.829055+00:00, queued_by_job_id=1, pid=184396
+2024-07-03 17:19:05,877 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:18:00+00:00: scheduled__2024-07-03T20:18:00+00:00, state:running, queued_at: 2024-07-03 20:19:01.786449+00:00. externally triggered: False> successful
+2024-07-03 17:19:05,878 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:18:00+00:00, run_id=scheduled__2024-07-03T20:18:00+00:00, run_start_date=2024-07-03 20:19:01.804165+00:00, run_end_date=2024-07-03 20:19:05.878038+00:00, run_duration=4.073873, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:18:00+00:00, data_interval_end=2024-07-03 20:19:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:19:05,882 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:19:00+00:00, run_after=2024-07-03 20:20:00+00:00
+2024-07-03 17:20:01,656 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:20:00+00:00, run_after=2024-07-03 20:21:00+00:00
+2024-07-03 17:20:01,693 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:19:00+00:00 [scheduled]>
+2024-07-03 17:20:01,693 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:20:01,693 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:19:00+00:00 [scheduled]>
+2024-07-03 17:20:01,694 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:20:01,695 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:19:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:20:01,695 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:19:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:20:01,699 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:19:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:20:05,780 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:19:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:20:05,785 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:19:00+00:00, map_index=-1, run_start_date=2024-07-03 20:20:02.411291+00:00, run_end_date=2024-07-03 20:20:05.532529+00:00, run_duration=3.121238, state=success, executor_state=success, try_number=1, max_tries=0, job_id=11, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:20:01.694187+00:00, queued_by_job_id=1, pid=184818
+2024-07-03 17:20:05,820 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:19:00+00:00: scheduled__2024-07-03T20:19:00+00:00, state:running, queued_at: 2024-07-03 20:20:01.651529+00:00. externally triggered: False> successful
+2024-07-03 17:20:05,820 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:19:00+00:00, run_id=scheduled__2024-07-03T20:19:00+00:00, run_start_date=2024-07-03 20:20:01.669506+00:00, run_end_date=2024-07-03 20:20:05.820687+00:00, run_duration=4.151181, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:19:00+00:00, data_interval_end=2024-07-03 20:20:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:20:05,825 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:20:00+00:00, run_after=2024-07-03 20:21:00+00:00
+2024-07-03 17:21:01,694 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:21:00+00:00, run_after=2024-07-03 20:22:00+00:00
+2024-07-03 17:21:01,733 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:20:00+00:00 [scheduled]>
+2024-07-03 17:21:01,733 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:21:01,733 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:20:00+00:00 [scheduled]>
+2024-07-03 17:21:01,735 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:21:01,735 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:20:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:21:01,735 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:20:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:21:01,739 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:20:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:21:05,774 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:20:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:21:05,780 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:20:00+00:00, map_index=-1, run_start_date=2024-07-03 20:21:02.438147+00:00, run_end_date=2024-07-03 20:21:05.530969+00:00, run_duration=3.092822, state=success, executor_state=success, try_number=1, max_tries=0, job_id=12, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:21:01.734245+00:00, queued_by_job_id=1, pid=185162
+2024-07-03 17:21:05,924 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:20:00+00:00: scheduled__2024-07-03T20:20:00+00:00, state:running, queued_at: 2024-07-03 20:21:01.689315+00:00. externally triggered: False> successful
+2024-07-03 17:21:05,925 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:20:00+00:00, run_id=scheduled__2024-07-03T20:20:00+00:00, run_start_date=2024-07-03 20:21:01.708269+00:00, run_end_date=2024-07-03 20:21:05.925058+00:00, run_duration=4.216789, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:20:00+00:00, data_interval_end=2024-07-03 20:21:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:21:05,929 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:21:00+00:00, run_after=2024-07-03 20:22:00+00:00
+2024-07-03 17:21:12,052 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-03 17:22:01,280 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:22:00+00:00, run_after=2024-07-03 20:23:00+00:00
+2024-07-03 17:22:01,319 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:21:00+00:00 [scheduled]>
+2024-07-03 17:22:01,319 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:22:01,319 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:21:00+00:00 [scheduled]>
+2024-07-03 17:22:01,321 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:22:01,321 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:21:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:22:01,322 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:21:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:22:01,326 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:21:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:22:05,602 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:21:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:22:05,605 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:21:00+00:00, map_index=-1, run_start_date=2024-07-03 20:22:02.061744+00:00, run_end_date=2024-07-03 20:22:05.344223+00:00, run_duration=3.282479, state=success, executor_state=success, try_number=1, max_tries=0, job_id=13, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:22:01.320360+00:00, queued_by_job_id=1, pid=185513
+2024-07-03 17:22:05,640 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:21:00+00:00: scheduled__2024-07-03T20:21:00+00:00, state:running, queued_at: 2024-07-03 20:22:01.275593+00:00. externally triggered: False> successful
+2024-07-03 17:22:05,640 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:21:00+00:00, run_id=scheduled__2024-07-03T20:21:00+00:00, run_start_date=2024-07-03 20:22:01.292550+00:00, run_end_date=2024-07-03 20:22:05.640515+00:00, run_duration=4.347965, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:21:00+00:00, data_interval_end=2024-07-03 20:22:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:22:05,645 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:22:00+00:00, run_after=2024-07-03 20:23:00+00:00
+2024-07-03 17:23:01,265 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:23:00+00:00, run_after=2024-07-03 20:24:00+00:00
+2024-07-03 17:23:01,306 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:22:00+00:00 [scheduled]>
+2024-07-03 17:23:01,306 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:23:01,307 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:22:00+00:00 [scheduled]>
+2024-07-03 17:23:01,308 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:23:01,309 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:22:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:23:01,309 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:22:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:23:01,313 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:22:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:23:05,566 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:22:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:23:05,571 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:22:00+00:00, map_index=-1, run_start_date=2024-07-03 20:23:02.054445+00:00, run_end_date=2024-07-03 20:23:05.288992+00:00, run_duration=3.234547, state=success, executor_state=success, try_number=1, max_tries=0, job_id=14, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:23:01.307802+00:00, queued_by_job_id=1, pid=185915
+2024-07-03 17:23:05,607 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:22:00+00:00: scheduled__2024-07-03T20:22:00+00:00, state:running, queued_at: 2024-07-03 20:23:01.258370+00:00. externally triggered: False> successful
+2024-07-03 17:23:05,607 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:22:00+00:00, run_id=scheduled__2024-07-03T20:22:00+00:00, run_start_date=2024-07-03 20:23:01.280729+00:00, run_end_date=2024-07-03 20:23:05.607568+00:00, run_duration=4.326839, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:22:00+00:00, data_interval_end=2024-07-03 20:23:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:23:05,613 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:23:00+00:00, run_after=2024-07-03 20:24:00+00:00
+2024-07-03 17:24:01,009 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:24:00+00:00, run_after=2024-07-03 20:25:00+00:00
+2024-07-03 17:24:01,040 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:23:00+00:00 [scheduled]>
+2024-07-03 17:24:01,041 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:24:01,041 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:23:00+00:00 [scheduled]>
+2024-07-03 17:24:01,041 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:24:01,042 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:23:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:24:01,042 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:23:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:24:01,045 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:23:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:24:05,206 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:23:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:24:05,212 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:23:00+00:00, map_index=-1, run_start_date=2024-07-03 20:24:01.806725+00:00, run_end_date=2024-07-03 20:24:04.948217+00:00, run_duration=3.141492, state=success, executor_state=success, try_number=1, max_tries=0, job_id=15, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:24:01.041476+00:00, queued_by_job_id=1, pid=186301
+2024-07-03 17:24:05,248 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:23:00+00:00: scheduled__2024-07-03T20:23:00+00:00, state:running, queued_at: 2024-07-03 20:24:01.003578+00:00. externally triggered: False> successful
+2024-07-03 17:24:05,249 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:23:00+00:00, run_id=scheduled__2024-07-03T20:23:00+00:00, run_start_date=2024-07-03 20:24:01.022631+00:00, run_end_date=2024-07-03 20:24:05.249170+00:00, run_duration=4.226539, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:23:00+00:00, data_interval_end=2024-07-03 20:24:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:24:05,252 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:24:00+00:00, run_after=2024-07-03 20:25:00+00:00
+2024-07-03 17:25:02,003 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:25:00+00:00, run_after=2024-07-03 20:26:00+00:00
+2024-07-03 17:25:02,024 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:24:00+00:00 [scheduled]>
+2024-07-03 17:25:02,025 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:25:02,025 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:24:00+00:00 [scheduled]>
+2024-07-03 17:25:02,025 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:25:02,026 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:24:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:25:02,026 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:24:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:25:02,029 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:24:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:25:06,443 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:24:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:25:06,447 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:24:00+00:00, map_index=-1, run_start_date=2024-07-03 20:25:02.820978+00:00, run_end_date=2024-07-03 20:25:06.176858+00:00, run_duration=3.35588, state=success, executor_state=success, try_number=1, max_tries=0, job_id=16, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:25:02.025375+00:00, queued_by_job_id=1, pid=186723
+2024-07-03 17:25:06,475 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:24:00+00:00: scheduled__2024-07-03T20:24:00+00:00, state:running, queued_at: 2024-07-03 20:25:02.001561+00:00. externally triggered: False> successful
+2024-07-03 17:25:06,475 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:24:00+00:00, run_id=scheduled__2024-07-03T20:24:00+00:00, run_start_date=2024-07-03 20:25:02.011341+00:00, run_end_date=2024-07-03 20:25:06.475196+00:00, run_duration=4.463855, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:24:00+00:00, data_interval_end=2024-07-03 20:25:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:25:06,477 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:25:00+00:00, run_after=2024-07-03 20:26:00+00:00
+2024-07-03 17:26:01,938 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:26:00+00:00, run_after=2024-07-03 20:27:00+00:00
+2024-07-03 17:26:01,976 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:25:00+00:00 [scheduled]>
+2024-07-03 17:26:01,977 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:26:01,977 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:25:00+00:00 [scheduled]>
+2024-07-03 17:26:01,978 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:26:01,979 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:25:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:26:01,979 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:25:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:26:01,983 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:25:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:26:06,282 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:25:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:26:06,287 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:25:00+00:00, map_index=-1, run_start_date=2024-07-03 20:26:02.791272+00:00, run_end_date=2024-07-03 20:26:05.997976+00:00, run_duration=3.206704, state=success, executor_state=success, try_number=1, max_tries=0, job_id=17, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:26:01.977891+00:00, queued_by_job_id=1, pid=187085
+2024-07-03 17:26:06,315 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:25:00+00:00: scheduled__2024-07-03T20:25:00+00:00, state:running, queued_at: 2024-07-03 20:26:01.933270+00:00. externally triggered: False> successful
+2024-07-03 17:26:06,315 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:25:00+00:00, run_id=scheduled__2024-07-03T20:25:00+00:00, run_start_date=2024-07-03 20:26:01.952401+00:00, run_end_date=2024-07-03 20:26:06.315329+00:00, run_duration=4.362928, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:25:00+00:00, data_interval_end=2024-07-03 20:26:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:26:06,317 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:26:00+00:00, run_after=2024-07-03 20:27:00+00:00
+2024-07-03 17:26:12,104 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-03 17:27:01,199 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:27:00+00:00, run_after=2024-07-03 20:28:00+00:00
+2024-07-03 17:27:01,222 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:26:00+00:00 [scheduled]>
+2024-07-03 17:27:01,222 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:27:01,222 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:26:00+00:00 [scheduled]>
+2024-07-03 17:27:01,223 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:27:01,223 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:26:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:27:01,223 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:26:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:27:01,227 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:26:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:27:05,589 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:26:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:27:05,594 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:26:00+00:00, map_index=-1, run_start_date=2024-07-03 20:27:01.984670+00:00, run_end_date=2024-07-03 20:27:05.322887+00:00, run_duration=3.338217, state=success, executor_state=success, try_number=1, max_tries=0, job_id=18, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:27:01.222774+00:00, queued_by_job_id=1, pid=187462
+2024-07-03 17:27:07,438 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:26:00+00:00: scheduled__2024-07-03T20:26:00+00:00, state:running, queued_at: 2024-07-03 20:27:01.196690+00:00. externally triggered: False> successful
+2024-07-03 17:27:07,438 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:26:00+00:00, run_id=scheduled__2024-07-03T20:26:00+00:00, run_start_date=2024-07-03 20:27:01.206670+00:00, run_end_date=2024-07-03 20:27:07.438677+00:00, run_duration=6.232007, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:26:00+00:00, data_interval_end=2024-07-03 20:27:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:27:07,441 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:27:00+00:00, run_after=2024-07-03 20:28:00+00:00
+2024-07-03 17:28:01,145 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:28:00+00:00, run_after=2024-07-03 20:29:00+00:00
+2024-07-03 17:28:01,168 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:27:00+00:00 [scheduled]>
+2024-07-03 17:28:01,168 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:28:01,168 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:27:00+00:00 [scheduled]>
+2024-07-03 17:28:01,169 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:28:01,169 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:27:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:28:01,169 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:27:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:28:01,174 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:27:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:28:05,650 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:27:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:28:05,654 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:27:00+00:00, map_index=-1, run_start_date=2024-07-03 20:28:02.043453+00:00, run_end_date=2024-07-03 20:28:05.418781+00:00, run_duration=3.375328, state=success, executor_state=success, try_number=1, max_tries=0, job_id=19, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:28:01.168764+00:00, queued_by_job_id=1, pid=188007
+2024-07-03 17:28:05,693 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:27:00+00:00: scheduled__2024-07-03T20:27:00+00:00, state:running, queued_at: 2024-07-03 20:28:01.140811+00:00. externally triggered: False> successful
+2024-07-03 17:28:05,694 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:27:00+00:00, run_id=scheduled__2024-07-03T20:27:00+00:00, run_start_date=2024-07-03 20:28:01.154041+00:00, run_end_date=2024-07-03 20:28:05.694204+00:00, run_duration=4.540163, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:27:00+00:00, data_interval_end=2024-07-03 20:28:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:28:05,698 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:28:00+00:00, run_after=2024-07-03 20:29:00+00:00
+2024-07-03 17:29:01,349 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:29:00+00:00, run_after=2024-07-03 20:30:00+00:00
+2024-07-03 17:29:01,378 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:28:00+00:00 [scheduled]>
+2024-07-03 17:29:01,378 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:29:01,378 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:28:00+00:00 [scheduled]>
+2024-07-03 17:29:01,379 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:29:01,379 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:28:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:29:01,379 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:28:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:29:01,383 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:28:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:29:06,062 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:28:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:29:06,067 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:28:00+00:00, map_index=-1, run_start_date=2024-07-03 20:29:02.296382+00:00, run_end_date=2024-07-03 20:29:05.660852+00:00, run_duration=3.36447, state=success, executor_state=success, try_number=1, max_tries=0, job_id=20, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:29:01.378844+00:00, queued_by_job_id=1, pid=188498
+2024-07-03 17:29:06,101 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:28:00+00:00: scheduled__2024-07-03T20:28:00+00:00, state:running, queued_at: 2024-07-03 20:29:01.341749+00:00. externally triggered: False> successful
+2024-07-03 17:29:06,101 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:28:00+00:00, run_id=scheduled__2024-07-03T20:28:00+00:00, run_start_date=2024-07-03 20:29:01.358490+00:00, run_end_date=2024-07-03 20:29:06.101313+00:00, run_duration=4.742823, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:28:00+00:00, data_interval_end=2024-07-03 20:29:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:29:06,104 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:29:00+00:00, run_after=2024-07-03 20:30:00+00:00
+2024-07-03 17:30:01,041 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:30:00+00:00, run_after=2024-07-03 20:31:00+00:00
+2024-07-03 17:30:01,064 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:29:00+00:00 [scheduled]>
+2024-07-03 17:30:01,064 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:30:01,064 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:29:00+00:00 [scheduled]>
+2024-07-03 17:30:01,065 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:30:01,065 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:29:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:30:01,066 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:29:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:30:01,069 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:29:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:30:05,418 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:29:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:30:05,423 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:29:00+00:00, map_index=-1, run_start_date=2024-07-03 20:30:01.961159+00:00, run_end_date=2024-07-03 20:30:05.184015+00:00, run_duration=3.222856, state=success, executor_state=success, try_number=1, max_tries=0, job_id=21, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:30:01.065041+00:00, queued_by_job_id=1, pid=188862
+2024-07-03 17:30:05,460 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:29:00+00:00: scheduled__2024-07-03T20:29:00+00:00, state:running, queued_at: 2024-07-03 20:30:01.037375+00:00. externally triggered: False> successful
+2024-07-03 17:30:05,461 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:29:00+00:00, run_id=scheduled__2024-07-03T20:29:00+00:00, run_start_date=2024-07-03 20:30:01.049778+00:00, run_end_date=2024-07-03 20:30:05.461756+00:00, run_duration=4.411978, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:29:00+00:00, data_interval_end=2024-07-03 20:30:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:30:05,467 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:30:00+00:00, run_after=2024-07-03 20:31:00+00:00
+2024-07-03 17:31:01,093 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:31:00+00:00, run_after=2024-07-03 20:32:00+00:00
+2024-07-03 17:31:01,118 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:30:00+00:00 [scheduled]>
+2024-07-03 17:31:01,118 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:31:01,118 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:30:00+00:00 [scheduled]>
+2024-07-03 17:31:01,119 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:31:01,120 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:30:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:31:01,120 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:30:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:31:01,123 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:30:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:31:06,046 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:30:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:31:06,050 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:30:00+00:00, map_index=-1, run_start_date=2024-07-03 20:31:02.105708+00:00, run_end_date=2024-07-03 20:31:05.797719+00:00, run_duration=3.692011, state=success, executor_state=success, try_number=1, max_tries=0, job_id=22, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:31:01.119079+00:00, queued_by_job_id=1, pid=189299
+2024-07-03 17:31:06,076 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:30:00+00:00: scheduled__2024-07-03T20:30:00+00:00, state:running, queued_at: 2024-07-03 20:31:01.090207+00:00. externally triggered: False> successful
+2024-07-03 17:31:06,076 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:30:00+00:00, run_id=scheduled__2024-07-03T20:30:00+00:00, run_start_date=2024-07-03 20:31:01.102801+00:00, run_end_date=2024-07-03 20:31:06.076366+00:00, run_duration=4.973565, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:30:00+00:00, data_interval_end=2024-07-03 20:31:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:31:06,078 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:31:00+00:00, run_after=2024-07-03 20:32:00+00:00
+2024-07-03 17:31:12,158 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-03 17:32:01,756 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:32:00+00:00, run_after=2024-07-03 20:33:00+00:00
+2024-07-03 17:32:01,812 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:31:00+00:00 [scheduled]>
+2024-07-03 17:32:01,812 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:32:01,813 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:31:00+00:00 [scheduled]>
+2024-07-03 17:32:01,815 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:32:01,816 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:31:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:32:01,816 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:31:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:32:01,821 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:31:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:32:06,714 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:31:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:32:06,719 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:31:00+00:00, map_index=-1, run_start_date=2024-07-03 20:32:02.871428+00:00, run_end_date=2024-07-03 20:32:06.459288+00:00, run_duration=3.58786, state=success, executor_state=success, try_number=1, max_tries=0, job_id=23, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:32:01.814205+00:00, queued_by_job_id=1, pid=189649
+2024-07-03 17:32:06,785 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:31:00+00:00: scheduled__2024-07-03T20:31:00+00:00, state:running, queued_at: 2024-07-03 20:32:01.747647+00:00. externally triggered: False> successful
+2024-07-03 17:32:06,786 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:31:00+00:00, run_id=scheduled__2024-07-03T20:31:00+00:00, run_start_date=2024-07-03 20:32:01.777645+00:00, run_end_date=2024-07-03 20:32:06.786530+00:00, run_duration=5.008885, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:31:00+00:00, data_interval_end=2024-07-03 20:32:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:32:06,796 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:32:00+00:00, run_after=2024-07-03 20:33:00+00:00
+2024-07-03 17:33:01,920 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:33:00+00:00, run_after=2024-07-03 20:34:00+00:00
+2024-07-03 17:33:01,994 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:32:00+00:00 [scheduled]>
+2024-07-03 17:33:01,994 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:33:01,995 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:32:00+00:00 [scheduled]>
+2024-07-03 17:33:01,996 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:33:01,997 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:32:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:33:01,997 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:32:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:33:02,002 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:32:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:33:06,744 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:32:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:33:06,750 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:32:00+00:00, map_index=-1, run_start_date=2024-07-03 20:33:02.986117+00:00, run_end_date=2024-07-03 20:33:06.481586+00:00, run_duration=3.495469, state=success, executor_state=success, try_number=1, max_tries=0, job_id=24, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:33:01.995497+00:00, queued_by_job_id=1, pid=190010
+2024-07-03 17:33:06,777 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:32:00+00:00: scheduled__2024-07-03T20:32:00+00:00, state:running, queued_at: 2024-07-03 20:33:01.891358+00:00. externally triggered: False> successful
+2024-07-03 17:33:06,777 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:32:00+00:00, run_id=scheduled__2024-07-03T20:32:00+00:00, run_start_date=2024-07-03 20:33:01.954941+00:00, run_end_date=2024-07-03 20:33:06.777617+00:00, run_duration=4.822676, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:32:00+00:00, data_interval_end=2024-07-03 20:33:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:33:06,779 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:33:00+00:00, run_after=2024-07-03 20:34:00+00:00
+2024-07-03 17:34:01,334 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:34:00+00:00, run_after=2024-07-03 20:35:00+00:00
+2024-07-03 17:34:01,372 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:33:00+00:00 [scheduled]>
+2024-07-03 17:34:01,373 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:34:01,373 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:33:00+00:00 [scheduled]>
+2024-07-03 17:34:01,374 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:34:01,375 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:33:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:34:01,375 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:33:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:34:01,379 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:33:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:34:06,264 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:33:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:34:06,269 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:33:00+00:00, map_index=-1, run_start_date=2024-07-03 20:34:02.655537+00:00, run_end_date=2024-07-03 20:34:06.039563+00:00, run_duration=3.384026, state=success, executor_state=success, try_number=1, max_tries=0, job_id=25, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:34:01.373934+00:00, queued_by_job_id=1, pid=190401
+2024-07-03 17:34:06,308 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:33:00+00:00: scheduled__2024-07-03T20:33:00+00:00, state:running, queued_at: 2024-07-03 20:34:01.328492+00:00. externally triggered: False> successful
+2024-07-03 17:34:06,308 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:33:00+00:00, run_id=scheduled__2024-07-03T20:33:00+00:00, run_start_date=2024-07-03 20:34:01.345058+00:00, run_end_date=2024-07-03 20:34:06.308834+00:00, run_duration=4.963776, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:33:00+00:00, data_interval_end=2024-07-03 20:34:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:34:06,313 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:34:00+00:00, run_after=2024-07-03 20:35:00+00:00
+2024-07-03 17:35:01,196 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:35:00+00:00, run_after=2024-07-03 20:36:00+00:00
+2024-07-03 17:35:01,231 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:34:00+00:00 [scheduled]>
+2024-07-03 17:35:01,231 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:35:01,231 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:34:00+00:00 [scheduled]>
+2024-07-03 17:35:01,233 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:35:01,233 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:34:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:35:01,233 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:34:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:35:01,237 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:34:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:35:05,700 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:34:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:35:05,705 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:34:00+00:00, map_index=-1, run_start_date=2024-07-03 20:35:02.091057+00:00, run_end_date=2024-07-03 20:35:05.383102+00:00, run_duration=3.292045, state=success, executor_state=success, try_number=1, max_tries=0, job_id=26, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:35:01.232132+00:00, queued_by_job_id=1, pid=190823
+2024-07-03 17:35:05,740 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:34:00+00:00: scheduled__2024-07-03T20:34:00+00:00, state:running, queued_at: 2024-07-03 20:35:01.188035+00:00. externally triggered: False> successful
+2024-07-03 17:35:05,741 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:34:00+00:00, run_id=scheduled__2024-07-03T20:34:00+00:00, run_start_date=2024-07-03 20:35:01.207147+00:00, run_end_date=2024-07-03 20:35:05.741197+00:00, run_duration=4.53405, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:34:00+00:00, data_interval_end=2024-07-03 20:35:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:35:05,745 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:35:00+00:00, run_after=2024-07-03 20:36:00+00:00
+2024-07-03 17:36:02,918 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:36:00+00:00, run_after=2024-07-03 20:37:00+00:00
+2024-07-03 17:36:02,947 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:35:00+00:00 [scheduled]>
+2024-07-03 17:36:02,947 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:36:02,947 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:35:00+00:00 [scheduled]>
+2024-07-03 17:36:02,948 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:36:02,949 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:35:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:36:02,949 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:35:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:36:02,953 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:35:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:36:07,601 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:35:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:36:07,608 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:35:00+00:00, map_index=-1, run_start_date=2024-07-03 20:36:03.852182+00:00, run_end_date=2024-07-03 20:36:07.294987+00:00, run_duration=3.442805, state=success, executor_state=success, try_number=1, max_tries=0, job_id=27, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:36:02.948275+00:00, queued_by_job_id=1, pid=191209
+2024-07-03 17:36:07,744 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:35:00+00:00: scheduled__2024-07-03T20:35:00+00:00, state:running, queued_at: 2024-07-03 20:36:02.915648+00:00. externally triggered: False> successful
+2024-07-03 17:36:07,744 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:35:00+00:00, run_id=scheduled__2024-07-03T20:35:00+00:00, run_start_date=2024-07-03 20:36:02.926732+00:00, run_end_date=2024-07-03 20:36:07.744844+00:00, run_duration=4.818112, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:35:00+00:00, data_interval_end=2024-07-03 20:36:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:36:07,747 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:36:00+00:00, run_after=2024-07-03 20:37:00+00:00
+2024-07-03 17:36:12,201 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-03 17:37:01,310 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:37:00+00:00, run_after=2024-07-03 20:38:00+00:00
+2024-07-03 17:37:01,337 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:36:00+00:00 [scheduled]>
+2024-07-03 17:37:01,337 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:37:01,337 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:36:00+00:00 [scheduled]>
+2024-07-03 17:37:01,338 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:37:01,338 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:36:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:37:01,339 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:36:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:37:01,342 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:36:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:37:06,502 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:36:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:37:06,507 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:36:00+00:00, map_index=-1, run_start_date=2024-07-03 20:37:02.248202+00:00, run_end_date=2024-07-03 20:37:06.216902+00:00, run_duration=3.9687, state=success, executor_state=success, try_number=1, max_tries=0, job_id=28, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:37:01.337903+00:00, queued_by_job_id=1, pid=191566
+2024-07-03 17:37:08,661 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:36:00+00:00: scheduled__2024-07-03T20:36:00+00:00, state:running, queued_at: 2024-07-03 20:37:01.306543+00:00. externally triggered: False> successful
+2024-07-03 17:37:08,662 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:36:00+00:00, run_id=scheduled__2024-07-03T20:36:00+00:00, run_start_date=2024-07-03 20:37:01.318854+00:00, run_end_date=2024-07-03 20:37:08.662314+00:00, run_duration=7.34346, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:36:00+00:00, data_interval_end=2024-07-03 20:37:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:37:08,668 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:37:00+00:00, run_after=2024-07-03 20:38:00+00:00
+2024-07-03 17:38:02,046 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:38:00+00:00, run_after=2024-07-03 20:39:00+00:00
+2024-07-03 17:38:02,089 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:37:00+00:00 [scheduled]>
+2024-07-03 17:38:02,089 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:38:02,090 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:37:00+00:00 [scheduled]>
+2024-07-03 17:38:02,091 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:38:02,092 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:37:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:38:02,092 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:37:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:38:02,096 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:37:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:38:06,474 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:37:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:38:06,478 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:37:00+00:00, map_index=-1, run_start_date=2024-07-03 20:38:02.922976+00:00, run_end_date=2024-07-03 20:38:06.186121+00:00, run_duration=3.263145, state=success, executor_state=success, try_number=1, max_tries=0, job_id=29, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:38:02.090775+00:00, queued_by_job_id=1, pid=191973
+2024-07-03 17:38:06,509 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:37:00+00:00: scheduled__2024-07-03T20:37:00+00:00, state:running, queued_at: 2024-07-03 20:38:02.040407+00:00. externally triggered: False> successful
+2024-07-03 17:38:06,510 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:37:00+00:00, run_id=scheduled__2024-07-03T20:37:00+00:00, run_start_date=2024-07-03 20:38:02.062832+00:00, run_end_date=2024-07-03 20:38:06.510026+00:00, run_duration=4.447194, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:37:00+00:00, data_interval_end=2024-07-03 20:38:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:38:06,512 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:38:00+00:00, run_after=2024-07-03 20:39:00+00:00
+2024-07-03 17:39:01,934 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:39:00+00:00, run_after=2024-07-03 20:40:00+00:00
+2024-07-03 17:39:01,973 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:38:00+00:00 [scheduled]>
+2024-07-03 17:39:01,973 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:39:01,974 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:38:00+00:00 [scheduled]>
+2024-07-03 17:39:01,975 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:39:01,976 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:38:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:39:01,976 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:38:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:39:01,981 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:38:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:39:06,198 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:38:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:39:06,202 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:38:00+00:00, map_index=-1, run_start_date=2024-07-03 20:39:02.754490+00:00, run_end_date=2024-07-03 20:39:05.955881+00:00, run_duration=3.201391, state=success, executor_state=success, try_number=1, max_tries=0, job_id=30, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:39:01.974739+00:00, queued_by_job_id=1, pid=192460
+2024-07-03 17:39:06,230 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:38:00+00:00: scheduled__2024-07-03T20:38:00+00:00, state:running, queued_at: 2024-07-03 20:39:01.929170+00:00. externally triggered: False> successful
+2024-07-03 17:39:06,230 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:38:00+00:00, run_id=scheduled__2024-07-03T20:38:00+00:00, run_start_date=2024-07-03 20:39:01.946548+00:00, run_end_date=2024-07-03 20:39:06.230746+00:00, run_duration=4.284198, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:38:00+00:00, data_interval_end=2024-07-03 20:39:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:39:06,233 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:39:00+00:00, run_after=2024-07-03 20:40:00+00:00
+2024-07-03 17:40:01,038 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:40:00+00:00, run_after=2024-07-03 20:41:00+00:00
+2024-07-03 17:40:01,077 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:39:00+00:00 [scheduled]>
+2024-07-03 17:40:01,078 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:40:01,078 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:39:00+00:00 [scheduled]>
+2024-07-03 17:40:01,079 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:40:01,080 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:39:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:40:01,080 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:39:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:40:01,084 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:39:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:40:05,287 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:39:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:40:05,291 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:39:00+00:00, map_index=-1, run_start_date=2024-07-03 20:40:01.909079+00:00, run_end_date=2024-07-03 20:40:05.046468+00:00, run_duration=3.137389, state=success, executor_state=success, try_number=1, max_tries=0, job_id=31, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:40:01.078818+00:00, queued_by_job_id=1, pid=192852
+2024-07-03 17:40:05,324 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:39:00+00:00: scheduled__2024-07-03T20:39:00+00:00, state:running, queued_at: 2024-07-03 20:40:01.033096+00:00. externally triggered: False> successful
+2024-07-03 17:40:05,324 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:39:00+00:00, run_id=scheduled__2024-07-03T20:39:00+00:00, run_start_date=2024-07-03 20:40:01.053302+00:00, run_end_date=2024-07-03 20:40:05.324426+00:00, run_duration=4.271124, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:39:00+00:00, data_interval_end=2024-07-03 20:40:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:40:05,326 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:40:00+00:00, run_after=2024-07-03 20:41:00+00:00
+2024-07-03 17:41:01,230 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:41:00+00:00, run_after=2024-07-03 20:42:00+00:00
+2024-07-03 17:41:01,259 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:40:00+00:00 [scheduled]>
+2024-07-03 17:41:01,259 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:41:01,260 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:40:00+00:00 [scheduled]>
+2024-07-03 17:41:01,261 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:41:01,261 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:40:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:41:01,261 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:40:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:41:01,265 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:40:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:41:05,255 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:40:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:41:05,259 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:40:00+00:00, map_index=-1, run_start_date=2024-07-03 20:41:02.022718+00:00, run_end_date=2024-07-03 20:41:05.050641+00:00, run_duration=3.027923, state=success, executor_state=success, try_number=1, max_tries=0, job_id=32, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:41:01.260615+00:00, queued_by_job_id=1, pid=193259
+2024-07-03 17:41:05,292 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:40:00+00:00: scheduled__2024-07-03T20:40:00+00:00, state:running, queued_at: 2024-07-03 20:41:01.226825+00:00. externally triggered: False> successful
+2024-07-03 17:41:05,293 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:40:00+00:00, run_id=scheduled__2024-07-03T20:40:00+00:00, run_start_date=2024-07-03 20:41:01.241284+00:00, run_end_date=2024-07-03 20:41:05.293101+00:00, run_duration=4.051817, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:40:00+00:00, data_interval_end=2024-07-03 20:41:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:41:05,297 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:41:00+00:00, run_after=2024-07-03 20:42:00+00:00
+2024-07-03 17:41:12,254 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-03 17:42:01,148 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:42:00+00:00, run_after=2024-07-03 20:43:00+00:00
+2024-07-03 17:42:01,195 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:41:00+00:00 [scheduled]>
+2024-07-03 17:42:01,196 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:42:01,196 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:41:00+00:00 [scheduled]>
+2024-07-03 17:42:01,198 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:42:01,198 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:41:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:42:01,199 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:41:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:42:01,203 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:41:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:42:05,411 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:41:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:42:05,417 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:41:00+00:00, map_index=-1, run_start_date=2024-07-03 20:42:01.904426+00:00, run_end_date=2024-07-03 20:42:05.147480+00:00, run_duration=3.243054, state=success, executor_state=success, try_number=1, max_tries=0, job_id=33, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:42:01.196988+00:00, queued_by_job_id=1, pid=193660
+2024-07-03 17:42:05,452 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:41:00+00:00: scheduled__2024-07-03T20:41:00+00:00, state:running, queued_at: 2024-07-03 20:42:01.142234+00:00. externally triggered: False> successful
+2024-07-03 17:42:05,452 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:41:00+00:00, run_id=scheduled__2024-07-03T20:41:00+00:00, run_start_date=2024-07-03 20:42:01.164368+00:00, run_end_date=2024-07-03 20:42:05.452666+00:00, run_duration=4.288298, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:41:00+00:00, data_interval_end=2024-07-03 20:42:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:42:05,455 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:42:00+00:00, run_after=2024-07-03 20:43:00+00:00
+2024-07-03 17:43:01,112 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:43:00+00:00, run_after=2024-07-03 20:44:00+00:00
+2024-07-03 17:43:01,162 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:42:00+00:00 [scheduled]>
+2024-07-03 17:43:01,162 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:43:01,162 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:42:00+00:00 [scheduled]>
+2024-07-03 17:43:01,163 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:43:01,163 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:42:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:43:01,163 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:42:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:43:01,166 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:42:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:43:05,884 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:42:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:43:05,891 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:42:00+00:00, map_index=-1, run_start_date=2024-07-03 20:43:02.267265+00:00, run_end_date=2024-07-03 20:43:05.610909+00:00, run_duration=3.343644, state=success, executor_state=success, try_number=1, max_tries=0, job_id=34, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:43:01.162859+00:00, queued_by_job_id=1, pid=194027
+2024-07-03 17:43:06,039 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:42:00+00:00: scheduled__2024-07-03T20:42:00+00:00, state:running, queued_at: 2024-07-03 20:43:01.101357+00:00. externally triggered: False> successful
+2024-07-03 17:43:06,039 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:42:00+00:00, run_id=scheduled__2024-07-03T20:42:00+00:00, run_start_date=2024-07-03 20:43:01.135178+00:00, run_end_date=2024-07-03 20:43:06.039453+00:00, run_duration=4.904275, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:42:00+00:00, data_interval_end=2024-07-03 20:43:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:43:06,043 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:43:00+00:00, run_after=2024-07-03 20:44:00+00:00
+2024-07-03 17:44:01,607 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:44:00+00:00, run_after=2024-07-03 20:45:00+00:00
+2024-07-03 17:44:01,641 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:43:00+00:00 [scheduled]>
+2024-07-03 17:44:01,641 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:44:01,642 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:43:00+00:00 [scheduled]>
+2024-07-03 17:44:01,643 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:44:01,644 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:43:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:44:01,644 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:43:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:44:01,648 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:43:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:44:05,937 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:43:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:44:05,941 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:43:00+00:00, map_index=-1, run_start_date=2024-07-03 20:44:02.488590+00:00, run_end_date=2024-07-03 20:44:05.670433+00:00, run_duration=3.181843, state=success, executor_state=success, try_number=1, max_tries=0, job_id=35, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:44:01.642588+00:00, queued_by_job_id=1, pid=194417
+2024-07-03 17:44:05,975 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:43:00+00:00: scheduled__2024-07-03T20:43:00+00:00, state:running, queued_at: 2024-07-03 20:44:01.604132+00:00. externally triggered: False> successful
+2024-07-03 17:44:05,975 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:43:00+00:00, run_id=scheduled__2024-07-03T20:43:00+00:00, run_start_date=2024-07-03 20:44:01.618424+00:00, run_end_date=2024-07-03 20:44:05.975380+00:00, run_duration=4.356956, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:43:00+00:00, data_interval_end=2024-07-03 20:44:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:44:05,978 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:44:00+00:00, run_after=2024-07-03 20:45:00+00:00
+2024-07-03 17:45:01,407 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:45:00+00:00, run_after=2024-07-03 20:46:00+00:00
+2024-07-03 17:45:01,428 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:44:00+00:00 [scheduled]>
+2024-07-03 17:45:01,428 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:45:01,429 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:44:00+00:00 [scheduled]>
+2024-07-03 17:45:01,429 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:45:01,429 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:44:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:45:01,430 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:44:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:45:01,433 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:44:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:45:05,786 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:44:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:45:05,790 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:44:00+00:00, map_index=-1, run_start_date=2024-07-03 20:45:02.188633+00:00, run_end_date=2024-07-03 20:45:05.561581+00:00, run_duration=3.372948, state=success, executor_state=success, try_number=1, max_tries=0, job_id=36, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:45:01.429266+00:00, queued_by_job_id=1, pid=194830
+2024-07-03 17:45:05,818 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:44:00+00:00: scheduled__2024-07-03T20:44:00+00:00, state:running, queued_at: 2024-07-03 20:45:01.404665+00:00. externally triggered: False> successful
+2024-07-03 17:45:05,818 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:44:00+00:00, run_id=scheduled__2024-07-03T20:44:00+00:00, run_start_date=2024-07-03 20:45:01.415326+00:00, run_end_date=2024-07-03 20:45:05.818218+00:00, run_duration=4.402892, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:44:00+00:00, data_interval_end=2024-07-03 20:45:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:45:05,820 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:45:00+00:00, run_after=2024-07-03 20:46:00+00:00
+2024-07-03 17:46:01,290 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:46:00+00:00, run_after=2024-07-03 20:47:00+00:00
+2024-07-03 17:46:01,320 INFO - 1 tasks up for execution:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:45:00+00:00 [scheduled]>
+2024-07-03 17:46:01,320 INFO - DAG csv_to_csv has 0/16 running and queued tasks
+2024-07-03 17:46:01,320 INFO - Setting the following tasks to queued state:
+	<TaskInstance: csv_to_csv.run_meltano_task scheduled__2024-07-03T20:45:00+00:00 [scheduled]>
+2024-07-03 17:46:01,321 WARNING - cannot record scheduled_duration for task run_meltano_task because previous state change time has not been saved
+2024-07-03 17:46:01,321 INFO - Sending TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:45:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-03 17:46:01,321 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:45:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:46:01,325 INFO - Executing command: ['airflow', 'tasks', 'run', 'csv_to_csv', 'run_meltano_task', 'scheduled__2024-07-03T20:45:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/csv-to-csv.py']
+2024-07-03 17:46:05,338 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='csv_to_csv', task_id='run_meltano_task', run_id='scheduled__2024-07-03T20:45:00+00:00', try_number=1, map_index=-1)
+2024-07-03 17:46:05,344 INFO - TaskInstance Finished: dag_id=csv_to_csv, task_id=run_meltano_task, run_id=scheduled__2024-07-03T20:45:00+00:00, map_index=-1, run_start_date=2024-07-03 20:46:02.085671+00:00, run_end_date=2024-07-03 20:46:05.101552+00:00, run_duration=3.015881, state=success, executor_state=success, try_number=1, max_tries=0, job_id=37, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-03 20:46:01.321153+00:00, queued_by_job_id=1, pid=195301
+2024-07-03 17:46:05,378 INFO - Marking run <DagRun csv_to_csv @ 2024-07-03 20:45:00+00:00: scheduled__2024-07-03T20:45:00+00:00, state:running, queued_at: 2024-07-03 20:46:01.288065+00:00. externally triggered: False> successful
+2024-07-03 17:46:05,379 INFO - DagRun Finished: dag_id=csv_to_csv, execution_date=2024-07-03 20:45:00+00:00, run_id=scheduled__2024-07-03T20:45:00+00:00, run_start_date=2024-07-03 20:46:01.303971+00:00, run_end_date=2024-07-03 20:46:05.379209+00:00, run_duration=4.075238, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-07-03 20:45:00+00:00, data_interval_end=2024-07-03 20:46:00+00:00, dag_hash=ab92631ccc5c98094d60c95ec7bf972e
+2024-07-03 17:46:05,382 INFO - Setting next_dagrun for csv_to_csv to 2024-07-03 20:46:00+00:00, run_after=2024-07-03 20:47:00+00:00
+2024-07-03 17:46:12,307 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-03 17:46:16,705 ERROR - Exception when executing SchedulerJob._run_scheduler_loop
+Traceback (most recent call last):
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/jobs/scheduler_job_runner.py", line 855, in _execute
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/jobs/scheduler_job_runner.py", line 987, in _run_scheduler_loop
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/jobs/scheduler_job_runner.py", line 1061, in _do_scheduling
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/utils/retries.py", line 91, in wrapped_function
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/tenacity/__init__.py", line 347, in __iter__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/tenacity/__init__.py", line 325, in iter
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/tenacity/__init__.py", line 158, in reraise
+  File "/home/gabriela/anaconda3/lib/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/home/gabriela/anaconda3/lib/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/utils/retries.py", line 100, in wrapped_function
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/jobs/scheduler_job_runner.py", line 1127, in _create_dagruns_for_dags
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/models/dag.py", line 3742, in dags_needing_dagruns
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2024-07-03 17:46:16,739 INFO - Sending Signals.SIGTERM to group 181459. PIDs of all processes in the group: []
+2024-07-03 17:46:16,740 INFO - Sending the signal Signals.SIGTERM to group 181459
+2024-07-03 17:46:16,740 INFO - Sending the signal Signals.SIGTERM to process 181459 as process group is missing.
+2024-07-03 17:46:16,741 INFO - Exited execute loop
+2024-07-03 17:46:16,742 ERROR - Exception when running scheduler job
+Traceback (most recent call last):
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/jobs/job.py", line 393, in run_job
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/jobs/job.py", line 422, in execute_job
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/jobs/scheduler_job_runner.py", line 855, in _execute
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/jobs/scheduler_job_runner.py", line 987, in _run_scheduler_loop
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/jobs/scheduler_job_runner.py", line 1061, in _do_scheduling
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/utils/retries.py", line 91, in wrapped_function
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/tenacity/__init__.py", line 347, in __iter__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/tenacity/__init__.py", line 325, in iter
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/tenacity/__init__.py", line 158, in reraise
+  File "/home/gabriela/anaconda3/lib/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/home/gabriela/anaconda3/lib/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/utils/retries.py", line 100, in wrapped_function
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/jobs/scheduler_job_runner.py", line 1127, in _create_dagruns_for_dags
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/models/dag.py", line 3742, in dags_needing_dagruns
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/cli/commands/scheduler_command.py", line 52, in _run_scheduler_job
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/utils/session.py", line 79, in wrapper
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/jobs/job.py", line 395, in run_job
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/utils/session.py", line 76, in wrapper
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/jobs/job.py", line 240, in complete_execution
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/api_internal/internal_api_call.py", line 114, in wrapper
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/utils/session.py", line 76, in wrapper
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/airflow/jobs/job.py", line 332, in _update_in_db
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3056, in merge
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3136, in _merge
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2853, in get
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2975, in _get_impl
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/orm/loading.py", line 530, in load_on_pk_identity
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/gabriela/Documents/meltano-lighthouse/fonte-csv/.meltano/utilities/airflow/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/14/e3q8)

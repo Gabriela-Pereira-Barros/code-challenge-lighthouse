@@ -1,0 +1,29 @@
+version: 1
+default_environment: dev
+project_id: 926b84dd-c1f5-4955-bff9-b9eaa8346051
+environments:
+- name: dev
+- name: staging
+- name: prod
+plugins:
+  extractors:
+  - name: tap-postgres
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-postgres.git
+    config:
+      sqlalchemy_url: postgresql://gpb:5577@localhost:5577/dbfonte
+      filter_schemas:
+      - public
+  loaders:
+  - name: target-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/target-csv.git
+    config:
+      destination_path: /home/gabriela/airflow-docker/meltano/postgres
+      file_naming_scheme: '{stream_name}-{datestamp}.csv'
+  utilities:
+  - name: airflow
+    variant: apache
+    pip_url: git+https://github.com/meltano/airflow-ext.git@main apache-airflow==2.8.1
+      --constraint 
+      https://raw.githubusercontent.com/apache/airflow/constraints-2.8.1/constraints-no-providers-${MELTANO__PYTHON_VERSION}.txt
